@@ -28,3 +28,4 @@ volumes:
   db:
 networks:
   app-net:
+    external: true
