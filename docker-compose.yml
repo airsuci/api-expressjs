@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  mysqldb:
+    image: mysql:5.7
+    restart: unless-stopped
+    networks:
+      - app-net
+    environment:
+      - MYSQL_ROOT_PASSWORD=password1
+      - MYSQL_DATABASE=expressjs
+    ports:
+      - 3307:3306
+    volumes:
+      - db:/var/lib/mysql
+  app:
+    depends_on:
+      - mysqldb
+    build: .
+    restart: unless-stopped
+    networks:
+      - app-net
+    env_file: .env
+    ports:
+      - 3030:3030
+    stdin_open: true
+    tty: true
+volumes:
+  db:
+networks:
+  app-net:

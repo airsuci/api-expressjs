@@ -51,6 +51,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(process.env.MYSQL_PORT)
+app.listen(process.env.APP_PORT)
 connection.end()
 module.exports = app;
