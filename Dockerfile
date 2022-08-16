@@ -1,5 +1,8 @@
 FROM node:14.20-alpine
 FROM mysql:latest
+ENV MYSQL_ROOT_PASSWORD=root
+COPY ./database.sql /docker-entrypoint-initdb.d/
+
 
 
 # Create app directory
