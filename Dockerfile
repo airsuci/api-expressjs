@@ -1,10 +1,6 @@
 FROM node:14.20-alpine
 FROM mysql:latest
 ENV MYSQL_ROOT_PASSWORD=root
-COPY ./database.sql /docker-entrypoint-initdb.d/
-
-
-
 # Create app directory
 WORKDIR /app
 RUN apk add --no-cache git
@@ -12,6 +8,8 @@ RUN apk add --no-cache git
 # where available (npm@5+)
 #COPY package*.json ./
 RUN git clone https://github.com/airsuci/api-expressjs.git .
+
+COPY ./database.sql /docker-entrypoint-initdb.d/
 #RUN npm install
 #RUN npm install dotenv
 #RUN npm install mysql
