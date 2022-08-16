@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0ee7acdf-549a-4b63-b983-1f71319d22dc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +80,8 @@
       <workItem from="1660556902064" duration="6950000" />
       <workItem from="1660600027700" duration="31000" />
       <workItem from="1660612440911" duration="11466000" />
-      <workItem from="1660632916780" duration="1943000" />
+      <workItem from="1660632916780" duration="5123000" />
+      <workItem from="1660642362127" duration="480000" />
     </task>
     <servers />
   </component>

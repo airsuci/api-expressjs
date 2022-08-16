@@ -1,13 +1,14 @@
 version: '3.8'
+
 services:
   mysqldb:
     image: mysql:5.7
     restart: unless-stopped
-    networks:
-      - app-net
+    env_file: .env
+    command: --default-authentication-plugin=mysql_native_password
     environment:
-      - MYSQL_ROOT_PASSWORD=password1
-      - MYSQL_DATABASE=expressjs
+      - MYSQL_ROOT_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - MYSQL_DATABASE=$MYSQLDB_DATABASE
     ports:
       - 3307:3306
     volumes:
@@ -17,14 +18,17 @@ services:
       - mysqldb
     build: .
     restart: unless-stopped
-    networks:
-      - app-net
     env_file: .env
     ports:
       - 3030:3030
+    environment:
+      - MYSQL_HOST=mysqldb
+      - MYSQL_USER=$MYSQLDB_USER
+      - MYSQL_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - MYSQL_DBNAME=$MYSQLDB_DATABASE
+      - MYSQL_PORT=$MYSQLDB_DOCKER_PORT
     stdin_open: true
     tty: true
+
 volumes:
   db:
-networks:
-  app-net:

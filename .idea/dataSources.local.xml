@@ -15,7 +15,7 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
-    <data-source name="MySQL" uuid="30303863-c0e1-48ac-96a3-55de714f987f">
+    <data-source name="expressjs@localhost [2]" uuid="30303863-c0e1-48ac-96a3-55de714f987f">
       <database-info product="MySQL" version="5.7.39" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.25 (Revision: 08be9e9b4cba6aa115f9b27b215887af40b159e0)" dbms="MYSQL" exact-version="5.7.39">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>

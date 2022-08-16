@@ -7,7 +7,7 @@ RUN npm install
 #RUN npm install dotenv
 #RUN npm install mysql
 #RUN npm install nodemon -g
-
+COPY ./database.sql /docker-entrypoint-initdb.d/
 COPY . .
 EXPOSE 3030
 CMD [ "node", "app.js" ]
